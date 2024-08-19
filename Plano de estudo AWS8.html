@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Estudo para AWS ML Scholarship</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2, .container h3 {
+            margin-top: 0;
+        }
+
+        .topic {
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        label {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plano de Estudo para AWS ML Scholarship</h1>
+
+    <div class="grid-container">
+        <!-- Álgebra Básica -->
+        <div class="container">
+            <h2>Álgebra Básica (19/08 - 22/08)</h2>
+            <div class="topic">
+                <input type="checkbox" id="equacoes-lineares" onclick="toggleCompletion('equacoes-lineares')">
+                <label for="equacoes-lineares" id="label-equacoes-lineares">Equações Lineares e Quadráticas</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="fatoracao" onclick="toggleCompletion('fatoracao')">
+                <label for="fatoracao" id="label-fatoracao">Fatoração</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="manipulacao-expressoes" onclick="toggleCompletion('manipulacao-expressoes')">
+                <label for="manipulacao-expressoes" id="label-manipulacao-expressoes">Manipulação de Expressões</label>
+            </div>
+        </div>
+
+        <!-- Cálculo Básico -->
+        <div class="container">
+            <h2>Cálculo Básico (23/08 - 26/08)</h2>
+            <div class="topic">
+                <input type="checkbox" id="derivadas" onclick="toggleCompletion('derivadas')">
+                <label for="derivadas" id="label-derivadas">Derivadas</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="integrais" onclick="toggleCompletion('integrais')">
+                <label for="integrais" id="label-integrais">Integrais</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="limites" onclick="toggleCompletion('limites')">
+                <label for="limites" id="label-limites">Limites</label>
+            </div>
+        </div>
+
+        <!-- Estatística -->
+        <div class="container">
+            <h2>Estatística (27/08 - 30/08)</h2>
+            <div class="topic">
+                <input type="checkbox" id="media-mediana-moda" onclick="toggleCompletion('media-mediana-moda')">
+                <label for="media-mediana-moda" id="label-media-mediana-moda">Média, Mediana e Moda</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="desvio-padrao" onclick="toggleCompletion('desvio-padrao')">
+                <label for="desvio-padrao" id="label-desvio-padrao">Desvio Padrão e Variância</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="distribuicoes-probabilidade" onclick="toggleCompletion('distribuicoes-probabilidade')">
+                <label for="distribuicoes-probabilidade" id="label-distribuicoes-probabilidade">Distribuições de Probabilidade</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="testes-hipoteses" onclick="toggleCompletion('testes-hipoteses')">
+                <label for="testes-hipoteses" id="label-testes-hipoteses">Testes de Hipóteses</label>
+            </div>
+        </div>
+
+        <!-- Probabilidade -->
+        <div class="container">
+            <h2>Probabilidade (31/08 - 02/09)</h2>
+            <div class="topic">
+                <input type="checkbox" id="conceitos-basicos" onclick="toggleCompletion('conceitos-basicos')">
+                <label for="conceitos-basicos" id="label-conceitos-basicos">Conceitos Básicos</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="distribuicao-condicional" onclick="toggleCompletion('distribuicao-condicional')">
+                <label for="distribuicao-condicional" id="label-distribuicao-condicional">Distribuição Condicional</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="teorema-bayes" onclick="toggleCompletion('teorema-bayes')">
+                <label for="teorema-bayes" id="label-teorema-bayes">Teorema de Bayes</label>
+            </div>
+        </div>
+
+        <!-- Fundamentos de Machine Learning -->
+        <div class="container">
+            <h2>Fundamentos de Machine Learning (03/09 - 06/09)</h2>
+ 		<div class="topic">
+                <input type="checkbox" id="conceitos-ml" onclick="toggleCompletion('conceitos-ml')">
+                <label for="conceitos-ml" id="label-conceitos-ml">Conceitos Básicos de ML</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="tipos-aprendizado" onclick="toggleCompletion('tipos-aprendizado')">
+                <label for="tipos-aprendizado" id="label-tipos-aprendizado">Tipos de Aprendizado</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="algoritmos-classicos" onclick="toggleCompletion('algoritmos-classicos')">
+                <label for="algoritmos-classicos" id="label-algoritmos-classicos">Algoritmos Clássicos</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="validacao-cruzada" onclick="toggleCompletion('validacao-cruzada')">
+                <label for="validacao-cruzada" id="label-validacao-cruzada">Validação Cruzada</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="overfitting-underfitting" onclick="toggleCompletion('overfitting-underfitting')">
+                <label for="overfitting-underfitting" id="label-overfitting-underfitting">Overfitting e Underfitting</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="metricas-avaliacao" onclick="toggleCompletion('metricas-avaliacao')">
+                <label for="metricas-avaliacao" id="label-metricas-avaliacao">Métricas de Avaliação</label>
+            </div>
+        </div>
+
+        <!-- Engenharia de Features -->
+        <div class="container">
+            <h2>Engenharia de Features (07/09 - 10/09)</h2>
+            <div class="topic">
+                <input type="checkbox" id="normalizacao-padronizacao" onclick="toggleCompletion('normalizacao-padronizacao')">
+                <label for="normalizacao-padronizacao" id="label-normalizacao-padronizacao">Normalização e Padronização</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="selecao-features" onclick="toggleCompletion('selecao-features')">
+                <label for="selecao-features" id="label-selecao-features">Seleção de Features</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="criacao-features" onclick="toggleCompletion('criacao-features')">
+                <label for="criacao-features" id="label-criacao-features">Criação de Features</label>
+            </div>
+        </div>
+
+        <!-- Programação (Python) -->
+        <div class="container">
+            <h2>Programação (Python) (11/09 - 14/09)</h2>
+            <div class="topic">
+                                <input type="checkbox" id="manipulacao-dados" onclick="toggleCompletion('manipulacao-dados')">
+                <label for="manipulacao-dados" id="label-manipulacao-dados">Manipulação de Dados com Pandas</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="visualizacao-dados" onclick="toggleCompletion('visualizacao-dados')">
+                <label for="visualizacao-dados" id="label-visualizacao-dados">Visualização de Dados</label>
+            </div>
+        </div>
+
+        <!-- Introduction to Reinforcement Learning -->
+        <div class="container">
+            <h2>Introduction to Reinforcement Learning (15/09 - 18/09)</h2>
+            <div class="topic">
+                <input type="checkbox" id="conceitos-rl" onclick="toggleCompletion('conceitos-rl')">
+                <label for="conceitos-rl" id="label-conceitos-rl">Conceitos Básicos de RL</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="q-learning" onclick="toggleCompletion('q-learning')">
+                <label for="q-learning" id="label-q-learning">Q-Learning</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="exploracao-exploracao" onclick="toggleCompletion('exploracao-exploracao')">
+                <label for="exploracao-exploracao" id="label-exploracao-exploracao">Exploração vs Exploração</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="conclusao-rl" onclick="toggleCompletion('conclusao-rl')">
+                <label for="conclusao-rl" id="label-conclusao-rl">Conclusão do módulo RL (Revisão)</label>
+            </div>
+        </div>
+
+        <!-- Revisão e Preparação para o Quiz -->
+        <div class="container">
+            <h2>Revisão e Preparação para o Quiz (19/09 - 21/09)</h2>
+            <div class="topic">
+                <input type="checkbox" id="revisao-intensiva" onclick="toggleCompletion('revisao-intensiva')">
+                <label for="revisao-intensiva" id="label-revisao-intensiva">Revisão Intensiva (08/09 - 10/09)</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="preparacao-quiz" onclick="toggleCompletion('preparacao-quiz')">
+                <label for="preparacao-quiz" id="label-preparacao-quiz">Preparação final para o quiz (19/09 - 21/09)</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="treinamento-modelo" onclick="toggleCompletion('treinamento-modelo')">
+                <label for="treinamento-modelo" id="label-treinamento-modelo">Treinamento inicial do modelo (22/09)</label>
+            </div>
+        </div>
+   
+
+        <div class="container">
+    <h2>Assuntos para o Quiz</h2>
+    <div class="topic">
+        <input type="checkbox" id="algoritmos-ml" onclick="toggleCompletion('algoritmos-ml')">
+        <label for="algoritmos-ml" id="label-algoritmos-ml">Algoritmos de Machine Learning</label>
+    </div>
+    <div class="topic">
+        <input type="checkbox" id="preprocessamento-dados" onclick="toggleCompletion('preprocessamento-dados')">
+        <label for="preprocessamento-dados" id="label-preprocessamento-dados">Pré-processamento de Dados</label>
+    </div>
+    <div class="topic">
+        <input type="checkbox" id="avaliacao-modelos" onclick="toggleCompletion('avaliacao-modelos')">
+        <label for="avaliacao-modelos" id="label-avaliacao-modelos">Avaliação de Modelos</label>
+    </div>
+    <div class="topic">
+        <input type="checkbox" id="aprendizado-supervisionado" onclick="toggleCompletion('aprendizado-supervisionado')">
+        <label for="aprendizado-supervisionado" id="label-aprendizado-supervisionado">Aprendizado Supervisionado</label>
+    </div>
+    <div class="topic">
+        <input type="checkbox" id="aprendizado-nao-supervisionado" onclick="toggleCompletion('aprendizado-nao-supervisionado')">
+        <label for="aprendizado-nao-supervisionado" id="label-aprendizado-nao-supervisionado">Aprendizado Não Supervisionado</label>
+    </div>
+    <div class="topic">
+        <input type="checkbox" id="aprendizado-reforco" onclick="toggleCompletion('aprendizado-reforco')">
+        <label for="aprendizado-reforco" id="label-aprendizado-reforco">Aprendizado por Reforço</label>
+    </div>
+    <div class="topic">
+        <input type="checkbox" id="engenharia-features" onclick="toggleCompletion('engenharia-features')">
+        <label for="engenharia-features" id="label-engenharia-features">Engenharia de Features</label>
+    </div>
+</div>
+</div>
+
+
+
+    <script>
+        function toggleCompletion(id) {
+            const checkbox = document.getElementById(id);
+            const label = document.getElementById('label-' + id);
+
+            if (checkbox.checked) {
+                label.classList.add('completed');
+            } else {
+                label.classList.remove('completed');
+            }
+        }
+    </script>
+</body>
+</html>
+
