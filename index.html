@@ -363,19 +363,42 @@ input[type="checkbox"] {
 </div>
 
 
+<script>
+    // Função para alternar a conclusão e salvar o estado
+    function toggleCompletion(id) {
+        const checkbox = document.getElementById(id);
+        const label = document.getElementById('label-' + id);
 
-    <script>
-        function toggleCompletion(id) {
-            const checkbox = document.getElementById(id);
-            const label = document.getElementById('label-' + id);
-
-            if (checkbox.checked) {
-                label.classList.add('completed');
-            } else {
-                label.classList.remove('completed');
-            }
+        if (checkbox.checked) {
+            label.classList.add('completed');
+            localStorage.setItem(id, 'checked'); // Salvar como marcado
+        } else {
+            label.classList.remove('completed');
+            localStorage.setItem(id, 'unchecked'); // Salvar como desmarcado
         }
-    </script>
+    }
+
+    // Função para carregar o estado das checkboxes quando a página é carregada
+    function loadCompletion() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            const id = checkbox.id;
+            const status = localStorage.getItem(id);
+
+            if (status === 'checked') {
+                checkbox.checked = true;
+                document.getElementById('label-' + id).classList.add('completed');
+            } else {
+                checkbox.checked = false;
+                document.getElementById('label-' + id).classList.remove('completed');
+            }
+        });
+    }
+
+    // Chamar a função para carregar o estado das checkboxes ao carregar a página
+    window.onload = loadCompletion;
+</script>
+
 </body>
 </html>
 
