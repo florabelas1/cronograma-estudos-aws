@@ -4,54 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plano de Estudo para AWS ML Scholarship</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
+<style>    
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    margin: 0;
+    padding: 20px;
+}
 
-        h1, h2, h3 {
-            color: #333;
-        }
+h1, h2, h3 {
+    color: #569cd6;
+}
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
 
-        .container {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+.container {
+    background-color: #252526;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
-        .container h2, .container h3 {
-            margin-top: 0;
-        }
+.container h2, .container h3 {
+    margin-top: 0;
+    color: #4ec9b0;
+}
 
-        .topic {
-            margin-bottom: 10px;
-            margin-left: 20px;
-        }
+.topic {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
 
-        .completed {
-            text-decoration: line-through;
-            color: #888;
-        }
+.completed {
+    text-decoration: line-through;
+    color: #808080;
+}
 
-        label {
-            margin-left: 10px;
-            cursor: pointer;
-        }
+label {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #d4d4d4;
+}
 
-        input[type="checkbox"] {
-            cursor: pointer;
-        }
-    </style>
+input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #569cd6;
+}</style>
+
 </head>
 <body>
     <h1>Plano de Estudo para AWS ML Scholarship</h1>
@@ -74,6 +78,24 @@
             </div>
         </div>
 
+        <!-- Álgebra Linear* -->
+        <div class="container">
+            <h2>Álgebra Linear</h2>
+            <div class="topic">
+                <input type="checkbox" id="vetores-matrizes" onclick="toggleCompletion('vetores-matrizes')">
+                <label for="vetores-matrizes" id="label-vetores-matrizes">Vetores e Matrizes</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="determinantes-inversas" onclick="toggleCompletion('determinantes-inversas')">
+                <label for="determinantes-inversas" id="label-determinantes-inversas">Determinantes e Inversas de Matrizes</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="autovalores-autovetores" onclick="toggleCompletion('autovalores-autovetores')">
+                <label for="autovalores-autovetores" id="label-autovalores-autovetores">Autovalores e Autovetores</label>
+            </div>
+        </div>
+
+
         <!-- Cálculo Básico -->
         <div class="container">
             <h2>Cálculo Básico (23/08 - 26/08)</h2>
@@ -88,6 +110,23 @@
             <div class="topic">
                 <input type="checkbox" id="limites" onclick="toggleCompletion('limites')">
                 <label for="limites" id="label-limites">Limites</label>
+            </div>
+        </div>
+
+        <!-- Cálculo Avançado* -->
+        <div class="container">
+            <h2>Cálculo Avançado</h2>
+            <div class="topic">
+                <input type="checkbox" id="gradientes-derivadas" onclick="toggleCompletion('gradientes-derivadas')">
+                <label for="gradientes-derivadas" id="label-gradientes-derivadas">Gradientes e Derivadas Parciais</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="series-taylor" onclick="toggleCompletion('series-taylor')">
+                <label for="series-taylor" id="label-series-taylor">Séries de Taylor</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="integrais-multiplas" onclick="toggleCompletion('integrais-multiplas')">
+                <label for="integrais-multiplas" id="label-integrais-multiplas">Integrais Múltiplas</label>
             </div>
         </div>
 
@@ -112,6 +151,24 @@
             </div>
         </div>
 
+        <!-- Estatística Avançada* -->
+        <div class="container">
+            <h2>Estatística Avançada</h2>
+            <div class="topic">
+                <input type="checkbox" id="distribuicoes-avancadas" onclick="toggleCompletion('distribuicoes-avancadas')">
+                <label for="distribuicoes-avancadas" id="label-distribuicoes-avancadas">Distribuições de Probabilidade Avançadas</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="inferencia-bayesiana" onclick="toggleCompletion('inferencia-bayesiana')">
+                <label for="inferencia-bayesiana" id="label-inferencia-bayesiana">Inferência Bayesiana</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="regressao-correlacao" onclick="toggleCompletion('regressao-correlacao')">
+                <label for="regressao-correlacao" id="label-regressao-correlacao">Regressão e Correlação</label>
+            </div>
+        </div>
+
+
         <!-- Probabilidade -->
         <div class="container">
             <h2>Probabilidade (31/08 - 02/09)</h2>
@@ -129,6 +186,51 @@
             </div>
         </div>
 
+        <!-- Teoria das Probabilidades Avançada -->
+        <div class="container">
+            <h2>Teoria das Probabilidades Avançada</h2>
+            <div class="topic">
+                <input type="checkbox" id="teoremas-limite-central" onclick="toggleCompletion('teoremas-limite-central')">
+                <label for="teoremas-limite-central" id="label-teoremas-limite-central">Teoremas Limite Central</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="distribuicoes-independencia" onclick="toggleCompletion('distribuicoes-independencia')">
+                <label for="distribuicoes-independencia" id="label-distribuicoes-independencia">Distribuições Condicionais e Independência</label>
+            </div>
+        </div>
+
+        <!-- Fundamentos de Programação -->
+        <div class="container">
+            <h2>Fundamentos de Programação</h2>
+            <div class="topic">
+                <input type="checkbox" id="algoritmos-estruturas" onclick="toggleCompletion('algoritmos-estruturas')">
+                <label for="algoritmos-estruturas" id="label-algoritmos-estruturas">Algoritmos e Estruturas de Dados</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="analise-complexidade" onclick="toggleCompletion('analise-complexidade')">
+                <label for="analise-complexidade" id="label-analise-complexidade">Análise de Complexidade</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="programacao-funcional" onclick="toggleCompletion('programacao-funcional')">
+                <label for="programacao-funcional" id="label-programacao-funcional">Programação Funcional e Orientada a Objetos</label>
+            </div>
+        </div>
+
+
+        <!-- Otimização -->
+        <div class="container">
+            <h2>Otimização</h2>
+            <div class="topic">
+                <input type="checkbox" id="programacao-linear" onclick="toggleCompletion('programacao-linear')">
+                <label for="programacao-linear" id="label-programacao-linear">Programação Linear e Não Linear</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="metodos-gradiente" onclick="toggleCompletion('metodos-gradiente')">
+                <label for="metodos-gradiente" id="label-metodos-gradiente">Métodos de Gradiente</label>
+            </div>
+        </div>
+
+
         <!-- Fundamentos de Machine Learning -->
         <div class="container">
             <h2>Fundamentos de Machine Learning (03/09 - 06/09)</h2>
@@ -142,7 +244,7 @@
             </div>
             <div class="topic">
                 <input type="checkbox" id="algoritmos-classicos" onclick="toggleCompletion('algoritmos-classicos')">
-                <label for="algoritmos-classicos" id="label-algoritmos-classicos">Algoritmos Clássicos</label>
+                <label for="algoritmos-classicos" id="label-algoritmos-classicos">Algoritmos Clássicos: Regressão Linear, Árvore de Decisão, K-Nearest Neighbors (KNN), Support Vector Machines (SVM). </label>
             </div>
             <div class="topic">
                 <input type="checkbox" id="validacao-cruzada" onclick="toggleCompletion('validacao-cruzada')">
