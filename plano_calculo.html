@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Estudo para Cálculo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2d2d2d;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #ffcc00;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .container {
+            background-color: #3e3e3e;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .container h2, .container h3 {
+            margin-top: 0;
+        }
+
+        .topic {
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        label {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plano de Estudo para Cálculo</h1>
+
+    <div class="grid-container">
+        <!-- Revisão de Funções -->
+        <div class="container">
+            <h2>Revisão de Funções</h2>
+            <div class="topic">
+                <input type="checkbox" id="definicao-funcao" onclick="toggleCompletion('definicao-funcao')">
+                <label for="definicao-funcao" id="label-definicao-funcao">Definição de Função</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="tipos-funcoes" onclick="toggleCompletion('tipos-funcoes')">
+                <label for="tipos-funcoes" id="label-tipos-funcoes">Tipos de Funções</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="composicao-inversa" onclick="toggleCompletion('composicao-inversa')">
+                <label for="composicao-inversa" id="label-composicao-inversa">Composição e Inversa de Funções</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="graficos-funcoes" onclick="toggleCompletion('graficos-funcoes')">
+                <label for="graficos-funcoes" id="label-graficos-funcoes">Gráficos de Funções</label>
+            </div>
+        </div>
+
+        <!-- Limites de Funções -->
+        <div class="container">
+            <h2>Limites de Funções</h2>
+            <div class="topic">
+                <input type="checkbox" id="definicao-limite" onclick="toggleCompletion('definicao-limite')">
+                <label for="definicao-limite" id="label-definicao-limite">Definição de Limite</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="calculo-limites" onclick="toggleCompletion('calculo-limites')">
+                <label for="calculo-limites" id="label-calculo-limites">Cálculo de Limites</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="limites-laterais" onclick="toggleCompletion('limites-laterais')">
+                <label for="limites-laterais" id="label-limites-laterais">Limites Laterais e no Infinito</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="continuidade" onclick="toggleCompletion('continuidade')">
+                <label for="continuidade" id="label-continuidade">Continuidade e Tipos de Descontinuidade</label>
+            </div>
+        </div>
+
+        <!-- Derivadas -->
+        <div class="container">
+            <h2>Derivadas</h2>
+            <div class="topic">
+                <input type="checkbox" id="definicao-derivada" onclick="toggleCompletion('definicao-derivada')">
+                <label for="definicao-derivada" id="label-definicao-derivada">Definição de Derivada</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="regras-derivacao" onclick="toggleCompletion('regras-derivacao')">
+                <label for="regras-derivacao" id="label-regras-derivacao">Regras de Derivação</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="aplicacoes-derivadas" onclick="toggleCompletion('aplicacoes-derivadas')">
+                <label for="aplicacoes-derivadas" id="label-aplicacoes-derivadas">Aplicações Básicas de Derivadas</label>
+            </div>
+        </div>
+
+        <!-- Introdução a Integrais -->
+        <div class="container">
+            <h2>Introdução a Integrais</h2>
+            <div class="topic">
+                <input type="checkbox" id="definicao-integral" onclick="toggleCompletion('definicao-integral')">
+                <label for="definicao-integral" id="label-definicao-integral">Definição de Integral</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="calculo-integrais" onclick="toggleCompletion('calculo-integrais')">
+                <label for="calculo-integrais" id="label-calculo-integrais">Cálculo de Integrais Simples</label>
+            </div>
+            <div class="topic">
+                <input type="checkbox" id="teorema-fundamental" onclick="toggleCompletion('teorema-fundamental')">
+                <label for="teorema-fundamental" id="label-teorema-fundamental">Teorema Fundamental do Cálculo</label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCompletion(id) {
+            const checkbox = document.getElementById(id);
+            const label = document.getElementById('label-' + id);
+
+            if (checkbox.checked) {
+                label.classList.add('completed');
+            } else {
+                label.classList.remove('completed');
+            }
+        }
+
+        function loadCompletion() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const id = checkbox.id;
+                const status = localStorage.getItem(id);
+                
+                if (status === 'checked') {
+                    checkbox.checked = true;
+                    document.getElementById('label-' + id).classList.add('completed');
+                } else {
+                    checkbox.checked = false;
+                    document.getElementById('label-' + id).classList.remove('completed');
+                }
+            });
+        }
+
+        window.onload = loadCompletion;
+    </script>
+</body>
+</html>
